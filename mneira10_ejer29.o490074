@@ -1,0 +1,17 @@
+gcc -fopenmp HelloWorld.c -o helloWorld.x
+./helloWorld.x
+Hello from thread number: 1 out of: 4
+Hello from thread number: 0 out of: 4
+Hello from thread number: 2 out of: 4
+Hello from thread number: 3 out of: 4
+g++ adveccion.cpp -o adveccion.x -std=c++11
+./adveccion.x
+80
+0 0 0.025 
+19 0.5 0.025 
+39 1 0.025 
+79 2 0.025 
+python3 graph.py
+
+
+(hpcstats) Getting modules
