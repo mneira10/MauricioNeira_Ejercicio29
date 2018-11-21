@@ -63,16 +63,16 @@ void Lax(double *u, double t_max, double deltat)
   cout << N_T << " " << t_max << " " << deltat<< " "<< endl;
   for (int phi = 0; phi < N_T; phi++)
   {
-    for (int j = 0; j < N; j++)
+    for (int k = 0; k < N; k++)
     {
-      F[j] = flux(u[j]);
+      F[k] = flux(u[k]);
     }
     for (int j = 1; j < N - 1; j++)
     {
       u_copy[j] = 0.5 * (u[j + 1] + u[j - 1]);
       u_copy[j] -= (0.5 * deltat / delta_x) * (F[j + 1] - F[j - 1]);
-      copy(u_copy, u_copy + N, u);
     }
+      copy(u_copy, u_copy + N, u);
   }
 }
 
